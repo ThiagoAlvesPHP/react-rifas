@@ -56,13 +56,59 @@
         .logo {
             .logo-img {
                 width: 120px;
+                transition: all ease .3s;
+
+                &:hover {
+                    opacity: .7;
+                }
             }
+        }
+
+        .desktop {
+            display: none;
         }
 
         .hamburger {
             color: #debd0e;
             font-size: 25px;
             cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .navbar {
+        .content {
+            .desktop {
+                display: flex;
+
+                li {
+                    list-style: none;
+                    padding-left: 15px;
+
+                    &:last-child {
+                        padding-left: 0;
+                    }
+
+                    .link {
+                        color: #debd0e;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        cursor: pointer;
+                        transition: all ease .3s;
+
+                        &:hover {
+                            color: #debb0ed3;
+                        }
+                    }
+                }
+            }
+
+            .hamburger {
+                display: none;
+            }
         }
     }
 }

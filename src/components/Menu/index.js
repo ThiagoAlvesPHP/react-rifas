@@ -13,10 +13,15 @@ import './style.scss';
 export function Menu() {
 
     const [navbar, setNavbar] = useState(false);
+    const [list, setList] = useState([{link:'./', name:'home'},
+    {link:'./sweepstakes', name:'Sorteios'},
+    {link:'./doubt', name:'Dúvidas Frequentes'},
+    {link:'./contact', name:'Contato'}]);
 
     useEffect(() => {
-        // console.log(navbar);
-    }, [navbar]);
+
+        // console.log(list);
+    }, []);
 
     return (
         <nav className='navbar'>
@@ -25,6 +30,10 @@ export function Menu() {
                     <img className='logo-img' src={logo} alt='Logo do Site' />
                 </Link>
 
+                <ul className='links desktop'>
+                    { list.map( (e, key) => <li key={key}><Link className='link' to={e.link}>{e.name}</Link></li>) }
+                    <li className='link modal'>Cliente</li>
+                </ul>
                 <div onClick={(e) => setNavbar(true)} className='hamburger'>
                     <GiHamburgerMenu />
                 </div>
@@ -33,10 +42,7 @@ export function Menu() {
             <div className={`navbar-mobile ${navbar ? 'active' : ''}`}>
                 <div className='close' onClick={(e) => setNavbar(false)}><FaWindowClose /></div>
                 <div className='links'>
-                    <Link className='link' to='./'>Home</Link>
-                    <Link className='link' to='./sweepstakes'>Sorteios</Link>
-                    <Link className='link' to='./doubt'>Dúvidas Frequentes</Link>
-                    <Link className='link' to='./contact'>Contato</Link>
+                    { list.map( (e, key) => <Link key={key} className='link' to={e.link}>{e.name}</Link>) }
                     <div className='link modal'>Cliente</div>
                 </div>
             </div>
