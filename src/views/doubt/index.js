@@ -7,13 +7,13 @@ import { Menu } from "../../components/Menu";
 // STYLE
 import './style.scss';
 
-export function ContactView() {
+export function DoubtView() {
 
   return (
-    <div className='contact'>
+    <div className='doubt'>
       <Menu />
 
-      contato
+      Perguntas Frequentes
     </div>
   )
 }

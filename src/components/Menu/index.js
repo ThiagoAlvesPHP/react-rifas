@@ -13,10 +13,10 @@ import './style.scss';
 export function Menu() {
 
     const [navbar, setNavbar] = useState(false);
-    const [list, setList] = useState([{link:'./', name:'home'},
-    {link:'./sweepstakes', name:'Sorteios'},
-    {link:'./doubt', name:'Dúvidas Frequentes'},
-    {link:'./contact', name:'Contato'}]);
+    const [list, setList] = useState([{link:'/', name:'home'},
+    {link:'/sweepstakes', name:'Sorteios'},
+    {link:'/doubt', name:'Dúvidas Frequentes'},
+    {link:'/contact', name:'Contato'}]);
 
     useEffect(() => {
 
@@ -26,7 +26,7 @@ export function Menu() {
     return (
         <nav className='navbar'>
             <div className='content'>
-                <Link to='./' className='logo'>
+                <Link to='/' className='logo'>
                     <img className='logo-img' src={logo} alt='Logo do Site' />
                 </Link>
 

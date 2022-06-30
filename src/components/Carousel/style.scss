@@ -1,0 +1,92 @@
+.carousel {
+    .list {
+        .content {
+            position: absolute;
+            top: 50%;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .description {
+                padding: 20px 60px;
+                background-color: rgba(0,0,0,.7);
+                border-radius: 10px;
+                color: #FFF;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0 10px;
+
+                p {
+                    margin: 0;
+                }
+
+                .product-name {
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+
+                .date-name {
+                    margin: 5px 0;
+                    font-size: 18px;
+                }
+
+                .link {
+                    padding: 10px 30px;
+                    text-decoration: none;
+                    color: #000;
+                    background: rgba(222, 189, 14, .8);
+                    border-radius: 5px;
+                    font-size: 20px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: 15px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .navbar {
+        .content {
+            .desktop {
+                display: flex;
+
+                li {
+                    list-style: none;
+                    padding-left: 15px;
+
+                    &:last-child {
+                        padding-left: 0;
+                    }
+
+                    .link {
+                        color: #debd0e;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        cursor: pointer;
+                        transition: all ease .3s;
+
+                        &:hover {
+                            color: #debb0ed3;
+                        }
+                    }
+                }
+            }
+
+            .hamburger {
+                display: none;
+            }
+        }
+    }
+}

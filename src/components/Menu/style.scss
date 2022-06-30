@@ -19,7 +19,7 @@
 
         .close {
             position: absolute;
-            right: 15%;
+            right: 20%;
             top: 15px;
             font-size: 30px;
             color: #FFF;
@@ -29,6 +29,7 @@
         .links {
             display: flex;
             flex-direction: column;
+            margin-right: 5%;
 
             .link {
                 text-decoration: none;
