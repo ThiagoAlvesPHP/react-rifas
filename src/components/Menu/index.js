@@ -15,7 +15,7 @@ export function Menu() {
     const [navbar, setNavbar] = useState(false);
 
     useEffect(() => {
-        console.log(navbar);
+        // console.log(navbar);
     }, [navbar]);
 
     return (
