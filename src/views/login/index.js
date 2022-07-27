@@ -70,6 +70,8 @@ export function LoginView() {
           <button onClick={login} className='btn'>Logar</button>
         </div>
       </div>
+
+      <img className='logo' src='./assets/images/login.png' />
     </div>
   )
 }
