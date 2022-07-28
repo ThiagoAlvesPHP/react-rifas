@@ -1,3 +1,9 @@
-* {
-    font-family: 'Roboto';
+@import './mixins.scss';
+
+.home {
+    display: flex;
+
+    .container {
+        width: 100%;
+    }
 }

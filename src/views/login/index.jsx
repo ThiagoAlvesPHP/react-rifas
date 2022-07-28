@@ -1,5 +1,5 @@
 // LIBs
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import validator from 'validator';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
@@ -27,7 +27,7 @@ export function LoginView() {
     if (Cookie.get('token')) { 
       navigate("../home");
     }
-  }); 
+  }, []); 
 
   function login() {
     if (validator.isEmail(email)) {
@@ -44,7 +44,7 @@ export function LoginView() {
             Cookie.set('token', response.data.token, options);
             setTimeout(() => {
               navigate("../home", { replace: true });
-            }, 1000); 
+            }, 500); 
           } else {
             setValidPassword(response.data.error);
           }
