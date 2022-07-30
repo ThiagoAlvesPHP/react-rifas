@@ -24,6 +24,7 @@ export function HomeView() {
   const [time, setTime] = useState();
   const [day, setDay] = useState();
   const [datenew, setDateNew] = useState();
+  const [mode, setMode] = useState(false);
 
   const navigate = useNavigate();
 
@@ -45,11 +46,12 @@ export function HomeView() {
       setTime(((new Date).toLocaleString().substr(11, 8)));
     }, 1000);
   }, [time]);
-  
 
   return (
-    <div className='home'>
-      <MenuLeft menu={menu} setMenu={setMenu} />
+    <div className={`home ${mode ? 'dark' :'light'}`}>
+      
+      <MenuLeft menu={menu} setMode={setMode} setMenu={setMenu} />
+
       <div className='container'>
         <MenuRight menu={menu} setMenu={setMenu} />
         <div className='content'>

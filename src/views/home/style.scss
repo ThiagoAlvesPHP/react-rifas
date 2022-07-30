@@ -20,6 +20,47 @@
             }
         }
     }
+
+    &.dark {
+        background-color: rgba(0, 0, 0, .7);
+        color: #fff;
+
+        .menu-left {
+            background-color: rgba(65, 78, 102, .6);
+
+            .navbar {
+                .list {
+                    .link-primary {
+                        .submenu {
+                            background-color: #313947;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-right {
+            background-color: #000;
+            color: #FFF;
+        }
+
+        .content {
+            .cards {
+                .card {
+                    background-color: rgba(255, 255, 255, 0.4);
+                    box-shadow: 0 10px 10px #0000006e;
+
+                    .container {
+                        .footer-card {
+                            .link {
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1024px) {
